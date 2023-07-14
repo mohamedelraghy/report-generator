@@ -1,6 +1,6 @@
 #!/bin/bash
 
-figlet W e l c o m e2
+figlet W e l c o m e
 
 # Get the current date
 currentDate=$(date +"%Y-%m-%d")
@@ -42,8 +42,19 @@ Keep shining bright,
 John Doe 🌟
 "
 
+# create directory for reports if not exists
+
+dir="/home/$USER/Desktop/daily-report"
+
+if [ -d "$dir" ]; then
+  echo "Directory exists."
+else
+  echo "Directory does not exist."
+  mkdir $dir
+fi
+
 # Write the Markdown content to a file
-echo "$markdownContent" >"daily_report_$currentDate.md"
+echo "$markdownContent" >$dir/"daily_report_$currentDate.md"
 
 echo "Daily report generated successfully!"
 
