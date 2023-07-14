@@ -1,4 +1,4 @@
-# report_generator
+# report generator
 
 ## install packages required
 
