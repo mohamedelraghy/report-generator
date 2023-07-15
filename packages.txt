@@ -1,1 +1,3 @@
 figlet
+pandoc
+texlive-latex-base
